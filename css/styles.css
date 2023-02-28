@@ -1,0 +1,86 @@
+:root {
+  /* Accordion Colors */
+  --ghb-body-color: #000000; /* bs-accordion-color bs-accordion-btn-color */
+  --ghb-body-bg: rgb(255, 255, 255); /* --bs-accordion-bg */
+  --ghb-border-color: rgb(226, 226, 226); /* bs-accordion-border-color */
+  --ghb-accordion-btn-focus-border-color: #87cefa; /* originally #86b7fe */
+  --ghb-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* 0 0 0 0.25rem rgba(13, 110, 253, 0.25) */
+  --ghb-accordion-active-color: #0a58ca; /* originally --bs-primary-text #0a58ca */
+  --ghb-accordion-active-bg: #cfe2ff; /* Original #cfe2ff light transparent blue --bs-primary-bg-subtle  */
+
+  /* Accordion Icon Replacements */
+  --ghb-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+  --ghb-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230a58ca'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+  /* Accordion Icon Width */
+  --ghb-accordion-btn-icon-width: 1.875rem; /* bs-accordion-btn-icon-width */
+
+  /* Test */
+  --ghb-dark-color: #1b1b1b;
+  --ghb-light-color: #dedede;
+  --ghb-light-grey: #7a7a7a;
+
+  /* Test HSV */
+  --ghb-orange-color-rgb: rgb(255, 153, 59);
+  --ghb-orange-color-hs1: hsl(29, 100%, 62%);
+  --ghb-orange-color-hs1-darker: hsl(29, 100%, 52%);
+  --ghb-orange-color-hs1-darkest: hsl(29, 100%, 42%);
+}
+
+.accordion-ghb {
+  --bs-accordion-color: var(--ghb-body-color);
+  --bs-accordion-bg: var(--ghb-body-bg);
+  --bs-accordion-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-border-color: var(--ghb-border-color);
+  --bs-accordion-border-width: var(--bs-border-width);
+  --bs-accordion-border-radius: var(--bs-border-radius);
+  --bs-accordion-inner-border-radius: calc(
+    var(--bs-border-radius) - (var(--bs-border-width))
+  );
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-color: var(--ghb-body-color);
+  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  --bs-accordion-btn-icon: var(--ghb-accordion-btn-icon);
+  --bs-accordion-btn-icon-width: var(--ghb-accordion-btn-icon-width);
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --bs-accordion-btn-active-icon: var(--ghb-accordion-btn-active-icon);
+  --bs-accordion-btn-focus-border-color: var(
+    --ghb-accordion-btn-focus-border-color
+  );
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-active-color: var(--bs-primary-text);
+  --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#illustration {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+/*#skills {
+  align-items: center;
+}*/
+
+@media (min-width: 768px) {
+  .news-input {
+    width: 50%;
+  }
+}
