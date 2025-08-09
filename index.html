@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/main.js" defer></script>
     <title>GHB</title>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFFBDEVNQB"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-TFFBDEVNQB');
 </script>
 
@@ -26,8 +26,9 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
         <div class="container">
-            <a href="https://www.ghbmaps.com/images/png/ghb-white.png" target="_blank" class="navbar-brand"><img
-                    src="https://www.ghbmaps.com/images/png/ghb-white.png" height="30px" alt=""></a>
+            <a href="/assets/images/ghb-white.png" target="_blank" class="navbar-brand">
+                <img src="/assets/images/ghb-white.png" height="30" alt="GHB Maps" />
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -35,35 +36,18 @@
 
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#datacreation" class="nav-link">Data Creation</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a href="#spatial-data" class="nav-link">Spatial Data</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a href="#samples" class="nav-link">Samples</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/apps.html" class="nav-link">Apps</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/blog.html" class="nav-link">Articles</a>
-
-                    </li>
-
+                    <li class="nav-item"><a href="#datacreation" class="nav-link">Data Creation</a></li>
+                    <li class="nav-item"><a href="#spatial-data" class="nav-link">Spatial Data</a></li>
+                    <li class="nav-item"><a href="#samples" class="nav-link">Samples</a></li>
+                    <li class="nav-item"><a href="pages/apps.html" class="nav-link">Apps</a></li>
+                    <li class="nav-item"><a href="pages/blog.html" class="nav-link">Articles</a></li>
                 </ul>
             </div>
-
         </div>
-
     </nav>
+
     <!--Header GIS Portfolio-->
-    <section class="bg-dark text-light p-5  text-center text-sm-start">
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div>
@@ -71,48 +55,34 @@
                     <p class="lead my-4">
                         Perform data cleanup, processing, and verification. Document data workflows, data sources, and
                         data limitations.
-                        Create, develop, automate, and implement data workflows.
-                        Perform data analyses and computation using Esri's GIS Platform to deliver the latest digital
-                        mapping solutions available.
+                        Create, develop, automate, and implement data workflows. Perform data analyses and computation
+                        using Esri's GIS
+                        Platform to deliver the latest digital mapping solutions available.
                     </p>
                     <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contact-us">Contact
                         Us</button>
                 </div>
-                <img class="img-fluid w-50 d-none d-sm-block" src="https://www.ghbmaps.com/images/svg/xyz.svg"
-                    alt="XYZ">
-
+                <img class="img-fluid w-50 d-none d-sm-block" src="/assets/images/xyz.svg" alt="XYZ" />
             </div>
         </div>
     </section>
-
 
     <!--Additional Skills-->
     <section class="bg-primary text-light p-5">
         <div class="container">
             <div class="row mx-auto" id="skills">
-                <div class="col-sm ">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/rest-api.svg" alt="rest-api">
+                <div class="col-sm"><img class="mb-4" src="/assets/images/rest-api.svg" alt="rest-api" /></div>
+                <div class="col-sm"><img class="mb-4" src="/assets/images/arcgis-pro.svg" alt="arcgis-pro" /></div>
+                <div class="col-sm"><img class="mb-4" src="/assets/images/data-integrity.svg" alt="data-integrity" />
                 </div>
-                <div class="col-sm">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/arcgis-pro.svg" alt="arcgis-pro">
+                <div class="col-sm"><img class="mb-4" src="/assets/images/legal-descriptions.svg"
+                        alt="legal-descriptions" /></div>
+                <div class="col-sm"><img class="mb-4" src="/assets/images/arcgis-online.svg" alt="arcgis-online" />
                 </div>
-                <div class="col-sm">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/data-integrity.svg" alt="data-integrity">
-                </div>
-                <div class="col-sm">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/legal-descriptions.svg"
-                        alt="legal-descriptions">
-                </div>
-                <div class="col-sm">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/arcgis-online.svg" alt="arcgis-online">
-                </div>
-                <div class="col-sm">
-                    <img class="mb-4" src="https://www.ghbmaps.com/images/svg/relational-databases.svg"
-                        alt="relational-databases">
-                </div>
+                <div class="col-sm"><img class="mb-4" src="/assets/images/relational-databases.svg"
+                        alt="relational-databases" /></div>
             </div>
         </div>
-
     </section>
 
     <!--GIS Service Boxes-->
@@ -122,64 +92,51 @@
                 <div class="col-md">
                     <div class="card bg-dark text-light">
                         <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <i class="bi bi-bar-chart-fill"></i>
-                            </div>
-                            <h3 class="card-title mb-3">
-                                Data Creation
-                            </h3>
+                            <div class="h1 mb-3"><i class="bi bi-bar-chart-fill"></i></div>
+                            <h3 class="card-title mb-3">Data Creation</h3>
                             <p class="p card-text">
-                                Whether converting data from geo-referenced surveys, on screen digitizing, importing
-                                GPS data, or sourcing public and private data, GHB can provide the necessary support for
-                                your projects.
+                                Whether converting data from geo-referenced surveys, on screen digitizing, importing GPS
+                                data, or sourcing public
+                                and private data, GHB can provide the necessary support for your projects.
                             </p>
                             <a href="https://ghbmaps.maps.arcgis.com/apps/instant/media/index.html?appid=8d9a19a3349b4a858055c8ceb66ee864&locale=en-us"
                                 target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md">
                     <div class="card bg-secondary text-light">
                         <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <i class="bi bi-diagram-3"></i>
-                            </div>
-                            <h3 class="card-title mb-3">
-                                Data Conversion
-                            </h3>
+                            <div class="h1 mb-3"><i class="bi bi-diagram-3"></i></div>
+                            <h3 class="card-title mb-3">Data Conversion</h3>
                             <p class="p card-text">
                                 Convert and transform both vector and raster geospatial data to using all types of
-                                formats including SHP, KML, GPX, DXF, CSV, JSON, Esri File Geodatabase, GeoTiff, and
-                                many others.
+                                formats including SHP, KML,
+                                GPX, DXF, CSV, JSON, Esri File Geodatabase, GeoTiff, and many others.
                             </p>
                             <a href="https://www.samples.ghbmaps.com/coordinate-systems/" target="_blank"
                                 class="btn btn-dark">View Sample</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md">
                     <div class="card bg-dark text-light">
                         <div class="card-body text-center">
-                            <div class="h1 mb-3">
-                                <i class="bi bi-stack"></i>
-                            </div>
-                            <h3 class="card-title mb-3">
-                                Spatial Analysis
-                            </h3>
+                            <div class="h1 mb-3"><i class="bi bi-stack"></i></div>
+                            <h3 class="card-title mb-3">Spatial Analysis</h3>
                             <p class="p card-text">
                                 Using the latest tools to determine relationships, understand and describe locations and
-                                events, detect and quantify patterns, make predictions, and find the best locations and
-                                paths.
+                                events, detect and
+                                quantify patterns, make predictions, and find the best locations and paths.
                             </p>
                             <a href="https://www.samples.ghbmaps.com/user-experience-ux-design-trends-for-2018/"
-                                target="_blank" class="btn btn-primary">View
-                                Sample</a>
+                                target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
         </div>
     </section>
 
@@ -188,20 +145,22 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md">
-                    <img src="https://www.ghbmaps.com/images/png/earth.png" class="img-fluid" alt="">
+                    <img src="/assets/images/earth.png" class="img-fluid" alt="Earth" />
                 </div>
                 <div class="col-md p-5">
                     <h2>Data Creation</h2>
                     <p class="lead">
-                        Data creation includes workflows which allow extraction in digital form of real world
-                        data to be used for analysis and visualizaton?
+                        Data creation includes workflows which allow extraction in digital form of real world data to be
+                        used for analysis
+                        and visualizaton?
                     </p>
                     <p>
                         Important geospatial information is contained in a wide variety of maps available in the form of
-                        images and CAD data.
-                        The conventional approach is to manually extract data and store it in digital format. We can
-                        scan maps, georeference and
-                        assign real world coordinates and convert images to valuable geo-spatial information.
+                        images and CAD
+                        data. The conventional approach is to manually extract data and store it in digital format. We
+                        can scan maps,
+                        georeference and assign real world coordinates and convert images to valuable geo-spatial
+                        information.
                     </p>
                     <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=a0480381386646de84535fcccfe220b7"
                         target="_blank" class="btn btn-light mt-3">
@@ -212,27 +171,29 @@
         </div>
     </section>
 
-
-
     <!--Raster Data Section-->
     <section id="learn" class="p-5 bg-dark text-light">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-
                 <div class="col-md p-5">
                     <h2>Raster Data</h2>
                     <p class="lead">
                         A wide variety of data used in GIS are encoded in raster format. Those formats include digital
-                        elevation data, satellite images, digital orthophotos, scanned maps, and graphic files.
+                        elevation data,
+                        satellite images, digital orthophotos, scanned maps, and graphic files.
                     </p>
                     <p>
                         Raster data falls into four main categories, "Raster as basemaps", "Raster as surface maps",
-                        "Raster as thematic maps", and "Raster as attributes of a feature. Measurements values can also
-                        be broken into four types; ratio, interval, ordinal, and nominal. The picture to the right is an
-                        example of raster interval data. Raster Interval data can include the Fahrenheit temperature
-                        scale, and pH values. The values are on a linear scale but is not relative to a zero point. For
-                        example 0° does not indicate that no temperature exists and 0 feet does not indicate a lack of
-                        elevation because it indicates mean sea level.
+                        "Raster as thematic
+                        maps", and "Raster as attributes of a feature. Measurements values can also be broken into four
+                        types; ratio,
+                        interval, ordinal, and nominal. The picture to the right is an example of raster interval data.
+                        Raster Interval
+                        data can include the Fahrenheit temperature scale, and pH values. The values are on a linear
+                        scale but is not
+                        relative to a zero point. For example 0° does not indicate that no temperature exists and 0 feet
+                        does not indicate
+                        a lack of elevation because it indicates mean sea level.
                     </p>
                     <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=a0480381386646de84535fcccfe220b7"
                         target="_blank" class="btn btn-light mt-3">
@@ -240,13 +201,12 @@
                     </a>
                 </div>
                 <div class="col-md">
-                    <img src="https://www.ghbmaps.com/images/svg/raster-interval.svg" width=100% height=100%
-                        class="img-fluid" alt="">
+                    <img src="/assets/images/raster-interval.svg" width="100%" height="100%" class="img-fluid"
+                        alt="Raster interval" />
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <!--Sourcing Data Accordian Section-->
@@ -1592,7 +1552,6 @@
 
 
     <!--Sample Applications Section-->
-
     <section id="samples" class="p-5 bg-primary">
         <div class="container">
             <h2 class="text-center text-white">Sample Applications</h2>
@@ -1603,7 +1562,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://www.ghbmaps.com/images/svg/flight-path.svg" class="mb-3" alt="">
+                            <img src="/assets/images/flight-path.svg" class="mb-3" alt="Orthoimagery" />
                             <h3 class="card-title mb-3">Orthoimagery</h3>
                             <p class="card-text">Dataset consists of 0.30-meter, 4 band natural color orthoimages
                                 covering approximately 9,329 square miles (including water) over the New Hampshire State
@@ -1612,14 +1571,13 @@
                             <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=7ed1b461010040959e6797b3d667110e"
                                 target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
-
                     </div>
-
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://www.ghbmaps.com/images/svg/satellite-vs2.svg" class="mb-3" alt="">
+                            <img src="/assets/images/satellite-vs2.svg" class="mb-3" alt="NAIP Imagery" />
                             <h3 class="card-title mb-3">NAIP Imagery</h3>
                             <p class="card-text">The National Agriculture Imagery Program (NAIP) acquires aerial imagery
                                 during the agriculture growing seasons in the continental U.S. NAIP imagery is leveraged
@@ -1628,37 +1586,33 @@
                             <a href="https://ghb.maps.arcgis.com/images/apps/instant/media/index.html?appid=778d99bd14a848ea9f8646b81832694e"
                                 target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
-
                     </div>
-
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://www.ghbmaps.com/images/svg/marker.svg" class="mb-3" alt="">
+                            <img src="/assets/images/marker.svg" class="mb-3" alt="Parcel Data" />
                             <h3 class="card-title mb-3">Parcel Data</h3>
                             <p class="card-text">To allow residents to visualize tax revenue shift of town properties.
                                 This application was created to compare before and after assessed values. Source:
-                                Department of Revenue Parcels and
-                                attribute data downloaded from NH Granit. Residents can view Land Use, Zoning, Tax Map
-                                Index, and Tax Parcels</p>
+                                Department of Revenue Parcels and attribute data downloaded from NH Granit. Residents
+                                can view Land Use, Zoning, Tax Map Index, and Tax Parcels</p>
                             <a href="https://ghbmaps.maps.arcgis.com/apps/instant/media/index.html?appid=cfdfda3bda1d41e186fbe5269c22822b"
                                 target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
-
                     </div>
-
                 </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://www.ghbmaps.com/images/svg/gears.svg" class=" mb-3" alt="">
+                            <img src="/assets/images/gears.svg" class="mb-3" alt="Basemaps" />
                             <h3 class="card-title mb-3">Basemaps</h3>
                             <p class="card-text">These basemaps are delivered as vector tiles (PBF format) that are
                                 rendered client-side based on a style file that is delivered with the vector tiles.
                                 Vector basemaps are available in Map Viewer and Scene Viewer, as well as in ArcGIS Pro.
-                                Custom basemaps available to meet project needs. Contact us at info@ghbmaps.com
-                            </p>
+                                Custom basemaps available to meet project needs. Contact us at info@ghbmaps.com</p>
                             <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=5e21825838ac4569bd9921775adaed38"
                                 target="_blank" class="btn btn-primary">View Sample</a>
                         </div>
@@ -1668,48 +1622,34 @@
         </div>
     </section>
 
-
     <!--Contact & Map -->
     <section class="p-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col md">
-
-                    <img src="https://www.ghbmaps.com/images/svg/earth-graticules-lg.svg" class="img-fluid"
-                        id="illustration" alt="">
+                    <img src="/assets/images/earth-graticules-lg.svg" class="img-fluid" id="illustration"
+                        alt="Graticules" />
                     <p class="lead text-center">info@ghbmaps.com</p>
                 </div>
                 <div class="col-md">
                     <div id="map">
                         <iframe
                             src="https://ghbmaps.maps.arcgis.com/apps/instant/basic/index.html?appid=20e67eff6113460485206eddc6817e0e"
-                            frameborder="1" width="100%" height="100%" border-radius="10px"></iframe>
+                            frameborder="1" width="100%" height="100%" style="border-radius:10px;"></iframe>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-
 
     <!--Footer -->
     <footer class="p-5 bg-dark text-white text-center position-relative">
         <div class="container">
-            <p class="lead">
-                Copyright &copy; 2025 GHB Maps
-            </p>
-
+            <p class="lead">Copyright &copy; 2025 GHB Maps</p>
             <a href="#" class="position-absolute bottom-0 end-0 p-5">
-
                 <i class="bi bi-arrow-up-circle h1"></i>
             </a>
-
         </div>
-
     </footer>
 
     <!-- Modal -->
@@ -1725,70 +1665,46 @@
                     <form name="submit-to-google-sheet" id="guest-form"
                         action="https://formsubmit.co/474d63f659db3e5681ce46cc1ad51289" method="POST">
                         <!--Honeypot-->
-                        <input type="text" name="_honey" style="display: none;">
+                        <input type="text" name="_honey" style="display:none;" />
                         <!--Disable Captcha-->
-                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_captcha" value="false" />
                         <!--Thank you Page-->
-                        <input type="hidden" name="_next"
-                            value="https://ghbmaps.github.io/ghbmaps.com/pages/thank-you.html">
+                        <input type="hidden" name="_next" value="/pages/thank-you.html" />
+
                         <div class="mb-3">
-                            <label for="first-name" class="col-form-label">
-                                First Name:
-                            </label>
+                            <label for="first-name" class="col-form-label">First Name:</label>
                             <input type="text" class="form-control" id="first-name" name="firstname"
-                                placeholder="First Name" required>
-
+                                placeholder="First Name" required />
                         </div>
                         <div class="mb-3">
-                            <label for="last-name" class="col-form-label">
-                                Last Name:
-                            </label>
+                            <label for="last-name" class="col-form-label">Last Name:</label>
                             <input type="text" class="form-control" id="last-name" name="lastname"
-                                placeholder="Last Name" required>
-
+                                placeholder="Last Name" required />
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="col-form-label">
-                                Email:
-                            </label>
+                            <label for="email" class="col-form-label">Email:</label>
                             <input type="text" class="form-control" id="email" name="email"
-                                placeholder="steve-smith@gmail.com" required>
-
+                                placeholder="steve-smith@gmail.com" required />
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="col-form-label">
-                                Phone:
-                            </label>
+                            <label for="phone" class="col-form-label">Phone:</label>
                             <input type="text" class="form-control" id="phone" name="phone" placeholder="555-555-5555"
-                                required>
-
+                                required />
                         </div>
-                        <!--Modal Footer Goes Here-->
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
                         </div>
-
                     </form>
                 </div>
-
-
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-    </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
