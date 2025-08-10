@@ -8,33 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <script src="../js/main.js"></script>
     <title>GHB</title>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-        <div class="container">
-            <a href="https://www.ghbmaps.com" class="navbar-brand">
-                <img src="https://www.ghbmaps.com/images/png/ghb-white.png" alt="GHB Logo" height="30" class="me-2" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="apps.html" class="nav-link active">Apps</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Shared header -->
+    <div id="site-header"></div>
+
+
 
     <!-- Sample Applications Section -->
     <section id="samples" class="p-5 bg-primary">
@@ -52,8 +35,11 @@
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/flight-path.svg" class="mb-3" alt="" />
                             <h3 class="card-title text-dark">Editing</h3>
-                            <p class="text-dark">Sample demonstrates how to add the Editor component to a web
-                                application</p>
+                            <p class="text-dark">Once the application loads click on the template to add and draw the
+                                feature's geometry. Once the sketch is complete, update and necessary attribute
+                                information. The app provides the ability to create more than one feature at a time.
+                                Once all the features are created click "Create" to be applied back to the feature
+                                service.</p>
                             <a href="https://ghbmaps.maps.arcgis.com/apps/instant/sidebar/index.html?appid=e95d16ff07e54bf883cb1f6ff2c7059b&locale=en"
                                 class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
@@ -65,10 +51,12 @@
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/satellite-vs2.svg" class="mb-3" alt="" />
                             <h3 class="card-title text-dark">Landsat Imagery</h3>
-                            <p class="text-dark">Landsat allow you to see things on the electromagnetic spectrum,
-                                including what is invisible to the human eye</p>
+                            <p class="text-dark">Landsat allows you to see things on the electromagnetic spectrum,
+                                including what is invisible to the human eye. Landsat has amassed over a petabyte of
+                                data, with over 4 million scenes and growing. Landsat acquires images of every location
+                                on earth every 16 days.</p>
                             <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=14b005344e1a47e999c10b4367730bb8"
-                                class="btn btn-primary" , target="_blank">View Sample</a>
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -78,10 +66,12 @@
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/marker.svg" class="mb-3" alt="" />
                             <h3 class="card-title text-dark">Change Detection</h3>
-                            <p class="text-dark">Referencing NAIP Imagery from 2011 and 2021, example illustrates the
-                                ability to document landuse changes</p>
+                            <p class="text-dark">The National Agriculture Imagery Program (NAIP) acquires aerial imagery
+                                during the agriculture growing seasons in the continental U.S. NAIP imagery is leveraged
+                                in many ways not limited to land classification, real estate land sales, development,
+                                environmental issues, map changes and education.</p>
                             <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=778d99bd14a848ea9f8646b81832694e"
-                                class="btn btn-primary" , target="_blank">View Sample</a>
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -91,11 +81,14 @@
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/gears.svg" class="mb-3" alt="" />
                             <h3 class="card-title text-dark">Sentinel 2 Views</h3>
-                            <p class="text-dark">The Copernicus Sentinel-2 mission from ESA and the European Commision
-                                provides optical imagery for a wide range of applications
+                            <p class="text-dark">Sentinel-2 is an Earth Observation Satellite that provides
+                                multi-spectral imagery for any location in the world at 10-meter resolution. Sentinel-2
+                                image services provide temporal, multi-spectral imagery of the entire globe for improved
+                                monitoring of agriculture and forest conditions, monitoring of land cover changes, and
+                                to assist with natural disaster management.
                             </p>
                             <a href="https://experience.arcgis.com/experience/26d90c4fad7043c5a8adabcc25196411"
-                                class="btn btn-primary" , target="_blank">View Sample</a>
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -136,9 +129,14 @@
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/environment.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Environmental</h3>
-                            <p class="text-dark">Track water quality, hazardous sites, and ecological indicators.</p>
-                            <a href="#" class="btn btn-primary">View Sample</a>
+                            <h3 class="card-title text-dark">Maxar Satellite Imagery</h3>
+                            <p class="text-dark">World Imagery provides one meter or better satellite and aerial imagery
+                                in many parts of the world and lower resolution satellite imagery worldwide. The map
+                                includes 15m TerraColor imagery at small and mid-scales (~1:591M down to ~1:72k) and
+                                2.5m SPOT Imagery (~1:288k to ~1:72k) for the world. The map features 0.5m resolution
+                                imagery in the continental United States and parts of Western Europe from Maxar.</p>
+                            <a href="/apps/satellite-maxar/index.html" class="btn btn-primary" target="_blank">View
+                                Sample</a>
                         </div>
                     </div>
                 </div>
@@ -147,8 +145,12 @@
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/stats.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Crime Stats</h3>
-                            <p class="text-dark">Explore crime trends and patterns with NIBRS-compatible tools.</p>
+                            <h3 class="card-title text-dark">Esri Vector Basemaps</h3>
+                            <p class="text-dark">These basemaps are delivered as vector tiles (PBF format) that are
+                                rendered client-side based on a style file that is delivered with the vector tiles.
+                                Vector basemaps are available in Map Viewer and Scene Viewer, as well as in ArcGIS Pro,
+                                configurable apps that include a basemap gallery, Workforce for ArcGIS, Explorer for
+                                ArcGIS, and apps created using Web AppBuilder</p>
                             <a href="#" class="btn btn-primary">View Sample</a>
                         </div>
                     </div>
@@ -156,14 +158,18 @@
             </div>
 
             <!-- Row 3 -->
-            <div class="row g-4">
+            <div class="row g-4 mb-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/census.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Census Data</h3>
-                            <p class="text-dark">Access demographic, housing, and economic data from Census & ACS.</p>
-                            <a href="#" class="btn btn-primary">View Sample</a>
+                            <h3 class="card-title text-dark">Orthoimagery</h3>
+                            <p class="text-dark">Dataset consists of 0.30-meter, 4 band natural color orthoimages
+                                covering approximately 9,329 square miles (including water) over the New Hampshire State
+                                Wide area and its offshore islands. Orthoimagery combines the image characteristics of a
+                                photograph with the geometric qualities of a map.</p>
+                            <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=7ed1b461010040959e6797b3d667110e"
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -172,9 +178,12 @@
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/hazard.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Hazard Sites</h3>
-                            <p class="text-dark">Map Superfund, brownfields, or hazardous locations using EPA data.</p>
-                            <a href="#" class="btn btn-primary">View Sample</a>
+                            <h3 class="card-title text-dark">Geo-Referencing</h3>
+                            <p class="text-dark">Application allows user to view geo-referenced survey plans; identify
+                                before and after survey markers with coordinates in Degrees, DMS, XY coordinates for NAD
+                                27 (Feet) and NAD 83 (Meters)</p>
+                            <a href="https://ghb.maps.arcgis.com/apps/instant/media/index.html?appid=a0480381386646de84535fcccfe220b7"
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -183,9 +192,14 @@
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/permit.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Permitting</h3>
-                            <p class="text-dark">Track building permits, zoning approvals, and construction trends.</p>
-                            <a href="#" class="btn btn-primary">View Sample</a>
+                            <h3 class="card-title text-dark">Composite View</h3>
+                            <p class="text-dark">Sample demonstrates application with three composite map views that
+                                each have different spatial references. Main view (WKID 5070) NAD1983 Contiguous USA
+                                Albers, (WKID 5936) WGS1984 EPSG Alaska Polar Stereographic, and (WKID 102007) Hawaii
+                                Albers Equal Area Conic
+                            </p>
+                            <a href="https://www.ghbmaps.com/apps/composite-view-usa/index.html" class="btn btn-primary"
+                                target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
@@ -194,30 +208,238 @@
                     <div class="card bg-light h-100 text-center">
                         <div class="card-body">
                             <img src="https://www.ghbmaps.com/svg/solar.svg" class="mb-3" alt="" />
-                            <h3 class="card-title text-dark">Solar Sites</h3>
-                            <p class="text-dark">Identify and map solar infrastructure and energy production locations.
+                            <h3 class="card-title text-dark">National Parks</h3>
+                            <p class="text-dark">US National Parks & Forests
+                                Popups are provided for each location and provides various information including park
+                                designations such as national park, national preserve, national monument, national
+                                memorial, national seashore, national historic site, and many others.
                             </p>
-                            <a href="#" class="btn btn-primary">View Sample</a>
+                            <a href="https://ghb.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=dadbbefe733d4112baba08808f62b553"
+                                class="btn btn-primary" target="_blank">View Sample</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Row 4 -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/census.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Michigan Crime 2022</h3>
+                            <p class="text-dark">Interactive map visualizing aggregated crime statistics reported by
+                                Michigan law enforcement agencies in 2022. Data is sourced from the FBI’s NIBRS
+                                database, providing detailed counts of offenses, locations, and agency information.
+                                Built using ArcGIS Experience Builder for an intuitive, map-based exploration of crime
+                                trends.</p>
+                            <a href="https://experience.arcgis.com/experience/d8552ae759a44102827be15242b7e1a2"
+                                class="btn btn-primary" target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/hazard.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Tax Parcels</h3>
+                            <p class="text-dark">To allow residents to visualize tax revenue shift of town properties.
+                                This application was created to compare before and after assessed values. Parcels and
+                                attribute data downloaded from NH Granit. Residents can view Land Use, Zoning, Tax Map
+                                Index, and Tax Parcels</p>
+                            <a href="https://ghbmaps.maps.arcgis.com/apps/instant/media/index.html?appid=ee444389260e479a9c13b1f4f477e768"
+                                class="btn btn-primary" target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/permit.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Directions</h3>
+                            <p class="text-dark">Embed custom directions between two or more input locations using a
+                                route layer. The resulting directions are displayed with detailed turn by turn
+                                instructions. Options include driving time, trucking time, trucking distance, walking
+                                time, walking distance and more..
+                            </p>
+                            <a href="/apps/routing/index.html" class="btn btn-primary" target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/solar.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Sketch Tools</h3>
+                            <p class="text-dark">Creating new graphics or update existing graphics. Create graphics with
+                                point, polyline, polygon, rectangle, and circle. Update the graphic by rotating,
+                                scaling, moving, or reshaping
+                            </p>
+                            <a href="https://ghb.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=dadbbefe733d4112baba08808f62b553"
+                                class="btn btn-primary" target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 5 -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/census.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Elevation Profile</h3>
+                            <p class="text-dark">The Elevation Profile Widget displays the elevation profile from an
+                                input path. The input path is interactively created by drawing a single or multi-segment
+                                line. In this sample the input path is interactively created by drawing a single- or
+                                multi-segment line</p>
+                            <a href="/apps/elevation-profile-ny/index.html" class="btn btn-primary" target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/hazard.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">NDVI</h3>
+                            <p class="text-dark">NDVI stands for Normalized Difference Vegetation Index. It is a simple
+                                graphical indicator that can be used to analyze remote sensing measurements, often from
+                                a space platform, assessing whether or not the target being observed contains live green
+                                vegetation.</p>
+                            <a href="/apps/calcite/wolfeboro-ndvi/index.html" class="btn btn-primary"
+                                target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/permit.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">National Parks</h3>
+                            <p class="text-dark">National parks are designated for their natural beauty, unique
+                                geological features, diverse ecosystems, and recreational opportunities. They are home
+                                to some of the most iconic natural wonders in the world, including the Grand Canyon,
+                                Yellowstone, Yosemite, and Glacier National Parks.
+                            </p>
+                            <a href="https://ghbmaps.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=569f84f3f08b4bd99fb13501a858769e"
+                                class="btn btn-primary" target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/solar.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">The Villages</h3>
+                            <p class="text-dark">The Villages is a popular destination for retirees due to its warm
+                                climate, abundance of amenities, and active lifestyle. The community offers a variety of
+                                housing options, including single-family homes, condos, and apartments. It also has a
+                                wide range of amenities, including golf courses, and much more..
+                            </p>
+                            <a href="https://ghbmaps.maps.arcgis.com/apps/instant/media/index.html?appid=f584036f4ef7404fab13af40a90cf348"
+                                class="btn btn-primary" target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 6 -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/census.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Weather Visualization</h3>
+                            <p class="text-dark">This sample exemplifies how to apply the weather visualization to a
+                                Scene View. The clouds and weather effects like rain can also help to tell a story in a
+                                more realistic and immersive way. Click the "flooding" button to see the effects of an
+                                extreme rainfall event in the city of Utrecht, NL.</p>
+                            <a href="/apps/calcite/weather-visualization/index.html" class="btn btn-primary"
+                                target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/hazard.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Land Cover</h3>
+                            <p class="text-dark">The ImageryTileLayer in this sample shows the National Land Cover
+                                Database (NLCD) 2016 land cover types for the United States. Tiled imagery layers can be
+                                published and hosted in ArcGIS Online. These layers are image services generated from
+                                one or more image files.</p>
+                            <a href="/apps/calcite/land-cover/index.html" class="btn btn-primary" target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/permit.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">Pie Charts</h3>
+                            <p class="text-dark">Pie chart visualizations are used for visualizing multiple attribute
+                                values of a feature in one glance in point and polygon layers. This app uses pie charts
+                                to visualize the highest levels of education attained by the population in each county.
+                            </p>
+                            <a href="/apps/calcite/pie-charts/index.html" class="btn btn-primary" target="_blank">View
+                                Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light h-100 text-center">
+                        <div class="card-body">
+                            <img src="https://www.ghbmaps.com/svg/solar.svg" class="mb-3" alt="" />
+                            <h3 class="card-title text-dark">The Villages</h3>
+                            <p class="text-dark">The Villages is a popular destination for retirees due to its warm
+                                climate, abundance of amenities, and active lifestyle. The community offers a variety of
+                                housing options, including single-family homes, condos, and apartments. It also has a
+                                wide range of amenities, including golf courses, and much more..
+                            </p>
+                            <a href="https://ghbmaps.maps.arcgis.com/apps/instant/media/index.html?appid=f584036f4ef7404fab13af40a90cf348"
+                                class="btn btn-primary" target="_blank">View Sample</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="p-5 bg-dark text-white text-center position-relative">
-        <div class="container">
-            <p class="lead mb-0">Copyright © 2025 GHB Maps</p>
-            <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                <i class="bi bi-arrow-up-circle h1"></i>
-            </a>
-        </div>
-    </footer>
+    <!-- Shared footer -->
+    <div id="site-footer"></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script>
+        async function loadPartial(targetId, url) {
+            try {
+                const res = await fetch(url, { credentials: 'same-origin' });
+                if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+                document.getElementById(targetId).innerHTML = await res.text();
+            } catch (err) {
+                console.error('Failed to load partial:', url, err);
+            }
+        }
+
+        // Load header & footer (root-relative paths so they work on every page)
+        loadPartial('site-header', '/partials/header.html');
+        loadPartial('site-footer', '/partials/footer.html');
+    </script>
+
 </body>
 
 </html>
