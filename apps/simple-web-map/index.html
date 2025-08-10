@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Esri + Calcite Starter App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Calcite Design System -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/2.4.0/calcite.esm.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.4.0/calcite.css" />
+
+    <!-- Esri ArcGIS JS API -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.29/"></script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Avenir Next", sans-serif;
+        }
+
+        #viewDiv {
+            height: 100%;
+            width: 100%;
+        }
+
+        calcite-shell {
+            height: 100%;
+            width: 100%;
+        }
+
+        calcite-panel {
+            padding: 1rem;
+        }
+
+        #map-container {
+            position: relative;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <calcite-shell content-behind>
+        <calcite-shell-panel slot="primary-panel" position="start" width-scale="m">
+            <calcite-panel heading="Layer Toggle" description="Use this panel to control layers">
+                <calcite-switch id="toggleLayer" checked></calcite-switch>
+                <label for="toggleLayer">Show Cities</label>
+            </calcite-panel>
+        </calcite-shell-panel>
+
+        <div id="map-container">
+            <div id="viewDiv"></div>
+        </div>
+    </calcite-shell>
+
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer"
+        ], function (Map, MapView, FeatureLayer) {
+            const citiesLayer = new FeatureLayer({
+                url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/USA_Major_Cities/FeatureServer/0"
+            });
+
+            const map = new Map({
+                basemap: "topo-vector",
+                layers: [citiesLayer]
+            });
+
+            const view = new MapView({
+                container: "viewDiv",
+                map: map,
+                center: [-98, 39],
+                zoom: 4
+            });
+
+            // Toggle layer visibility using Calcite Switch
+            const toggle = document.getElementById("toggleLayer");
+            toggle.addEventListener("calciteSwitchChange", (event) => {
+                citiesLayer.visible = event.target.checked;
+            });
+        });
+    </script>
+</body>
+
+</html>

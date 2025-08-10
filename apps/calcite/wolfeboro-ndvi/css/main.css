@@ -1,0 +1,30 @@
+html,
+body,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#infoBtn {
+  position: absolute;
+  top: 100px;
+  left: 6px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+#ndvi-legend-1988-black {
+  height: 300px;
+  padding-left: 33%;
+}
+
+#ndvi-legend-2022-black {
+  height: 300px;
+  padding-left: 10%;
+}
+
+#compare-video {
+  text-align: center;
+}

@@ -1,0 +1,167 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Wolfeboro, NH (NDVI)</title>
+
+  <!--Calcite Imports-->
+  <script type="module" src="https://js.arcgis.com/calcite-components/1.3.1/calcite.esm.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.3.1/calcite.css" />
+
+  <!--ArcGIS Maps SDK for JavaScript Imports-->
+  <script src="https://js.arcgis.com/4.27/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" />
+
+  <!--Local JavaScript and CSS References-->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <div id="infoBtn" class="esri-widget">
+
+
+
+    <calcite-modal aria-labelledby="modal-title" id="info-modal">
+      <div slot="header" id="modal-title">
+        Normalized Difference Vegetation Index (NDVI)
+      </div>
+
+
+      <div slot="content">
+
+
+        <h3 id="compare-video">
+          <a href="https://www.ghbmaps.com/mp4/wolfeboro-ndvi.mp4" target="_blank">Wolfeboro, NH NDVI | Compare 1988 to
+            2022</a>
+        </h3>
+        <img src="https://www.ghbmaps.com/images/png/ndvi-legend-1988-black.png" alt="ndvi-legend-1988-black"
+          id="ndvi-legend-1988-black">
+        <img src="https://www.ghbmaps.com/images/png/ndvi-legend-2022-black.png" alt="ndvi-legend-2022-black"
+          id="ndvi-legend-2022-black">
+        <h3 id="data-source">
+          <a href="https://www.usgs.gov/landsat-missions/landsat-data-access" target="_blank">Data Source: USGS</a><br>
+          <a href="https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites" target="_blank">Landsat Band
+            Designations</a><br>
+          <a href="https://www.usgs.gov/media/files/landsat-4-5-tm-collection-2-level-1-data-format-control-book"
+            target="_blank">Landsat 4-5TM Collection 2 Level 1 Data</a><br>
+          <a href="https://www.usgs.gov/landsat-missions/landsat-8" target="_blank">Landsat 8</a><br>
+        </h3>
+
+
+        <p>
+          NDVI stands for Normalized Difference Vegetation Index. It is a simple graphical indicator that can be used to
+          analyze remote sensing measurements, often from a space platform, assessing whether or not the target being
+          observed contains live green vegetation.
+        </p>
+        <p>
+          The NDVI is calculated as follows:
+          <br>
+          NDVI = (NIR - R) / (NIR + R)
+          <br>
+          where:
+        </p>
+        <p id="usgs">
+          Landsat 4-5TM C2 L1 | NDVI Calculation (Band 4 - Band 3) / (Band 4 + Band 3)<br>
+          Landsat 8 | NDVI Calculation (Band 5 - Band 4) / (Band 5 + Band 4)
+        </p>
+        <p>
+          NIR is the near-infrared reflectance
+          <br>
+          R is the red reflectance
+          <br>
+          The NDVI ranges from -1 to 1. Values close to 1 indicate dense, healthy vegetation, while values close to 0
+          indicate no vegetation. Values between 0 and 1 indicate varying degrees of vegetation cover.
+        </p>
+        <p>
+          Negative NDVI values indicate the absence of vegetation. This can be due to a number of factors, including:
+        </p>
+        <ul>
+          <li>
+            Water: Water bodies such as lakes, rivers, and oceans have negative NDVI values.
+          </li>
+          <li>
+            Snow: Snow-covered areas also have negative NDVI values.
+          </li>
+          <li>
+            Bare soil: Bare soil, such as that found in deserts, also has negative NDVI values.
+          </li>
+          <li>
+            Human-made structures: Human-made structures such as buildings, roads, and parking lots also have negative
+            NDVI values.
+          </li>
+        </ul>
+        <p>
+          <br>
+          In some cases, negative NDVI values can also be caused by vegetation that is stressed or dying. This can be
+          due to factors such as drought, heat stress, or pests.
+        </p>
+        <p>
+          Overall, negative NDVI values are a good indicator of the absence of vegetation. This information can be used
+          to monitor changes in land cover, track the impact of climate change, and identify areas that are at risk of
+          desertification or deforestation.
+        </p>
+        <p>
+          The NDVI is a useful tool for monitoring vegetation change over time. It can be used to track deforestation,
+          desertification, and other changes in land cover. The NDVI can also be used to assess the impact of climate
+          change on vegetation.
+        </p>
+        <p>
+          The NDVI is a powerful tool for understanding the Earth's vegetation. It is a valuable resource for
+          scientists, policymakers, and anyone interested in the environment.
+        </p>
+        <p>
+          Here are some of the applications of NDVI:
+        </p>
+        <ul>
+          <li>
+            Monitoring deforestation and forest degradation
+          </li>
+          <li>
+            Tracking desertification and land degradation
+          </li>
+          <li>
+            Assessing the impact of climate change on vegetation
+          </li>
+          <li>
+            Identifying areas of agricultural productivity
+          </li>
+          <li>
+            Mapping water bodies
+          </li>
+          <li>
+            Monitoring vegetation health
+          </li>
+          <li>
+            Predicting crop yields
+          </li>
+          <li>
+            Assessing the impact of human activities on the environment
+            <br>
+            &nbsp;
+          </li>
+        </ul>
+        <p>
+          NDVI is a powerful tool that can be used to monitor and study a wide range of environmental issues. It is a
+          valuable resource for scientists, policymakers, and anyone interested in the Earth's ecosystems.
+        </p>
+
+      </div>
+      <calcite-button slot="primary" width="full" id="close-button">
+        Close
+      </calcite-button>
+    </calcite-modal>
+
+    <calcite-action data-action-id="info-button" icon="information" text="Information" scale="s" id="info-button">
+    </calcite-action>
+
+  </div>
+
+
+  </div>
+</body>
+
+</html>

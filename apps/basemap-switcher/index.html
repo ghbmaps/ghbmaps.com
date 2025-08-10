@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Basemap Switcher – Dropdown Only</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ArcGIS + Calcite -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/3.2.1/calcite.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://js.arcgis.com/4.33/"></script>
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.2.1/calcite.esm.js"></script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+
+    <div id="stylePanel">
+        <calcite-label>Basemap Style</calcite-label>
+        <calcite-combobox id="basemapDropdown" placeholder="Select a basemap" selection-mode="single">
+            <calcite-combobox-item value="arcgis/imagery" text-label="ArcGIS Imagery" selected></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/topographic" text-label="ArcGIS Topographic"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/streets-relief"
+                text-label="ArcGIS Streets Relief"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/light-gray" text-label="ArcGIS Light Gray"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/dark-gray" text-label="ArcGIS Dark Gray"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/streets" text-label="ArcGIS Streets"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/navigation" text-label="ArcGIS Navigation"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/navigation-night"
+                text-label="ArcGIS Navigation Night"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/oceans" text-label="ArcGIS Oceans"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/terrain" text-label="ArcGIS Terrain"></calcite-combobox-item>
+            <calcite-combobox-item value="arcgis/imagery-standard"
+                text-label="Imagery with Labels"></calcite-combobox-item>
+        </calcite-combobox>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Pie charts | Sample | ArcGIS Maps SDK for JavaScript 4.26</title>
+
+  <!--ArcGIS Maps SDK for JavaScript Imports-->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.26/"></script>
+
+  <!--Calcite Imports-->
+  <script type="module" src="https://js.arcgis.com/calcite-components/1.0.7/calcite.esm.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.7/calcite.css" />
+
+  <!--Local JavaScript and CSS References-->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+
+
+
+
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <calcite-card id="filter">
+    <h3>FILTER BY:</h3>
+    <calcite-segmented-control id="filterBy">
+      <calcite-segmented-control-item value="SOMEHS_CY" checked>No high school diploma </calcite-segmented-control-item>
+      <calcite-segmented-control-item value="HSGRAD_CY">High school diploma</calcite-segmented-control-item>
+      <calcite-segmented-control-item value="CollegeEducated">College educated</calcite-segmented-control-item>
+    </calcite-segmented-control>
+    <span>
+      <calcite-select id="operator" style="width: 50%; float: left">
+        <calcite-option value=">" selected>Greater than</calcite-option>
+        <calcite-option value="<">Less than</calcite-option>
+      </calcite-select>
+      <calcite-input id="filterPct" type="number" min="0" max="100" suffix-text="%"></calcite-input>
+    </span>
+    <span id="error">All fields must have value in order to filter.</span>
+    <span class="btns">
+      <calcite-button id="resetBtn" appearance="outline">Reset</calcite-button>
+      <calcite-button id="filterBtn">Filter</calcite-button>
+    </span>
+  </calcite-card>
+</body>
+
+</html>

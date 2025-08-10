@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Land Cover Imagery Tile Layers</title>
+
+  <!--ArcGIS Maps SDK for JavaScript Imports-->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.26/"></script>
+
+  <!--Calcite Imports-->
+  <script type="module" src="https://js.arcgis.com/calcite-components/1.0.7/calcite.esm.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.7/calcite.css" />
+
+  <!--Local JavaScript and CSS References-->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+
+
+
+
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <div id="infoDiv" class="esri-widget">
+    <h4 id="titleText" class="esri-widget__heading esri-editor__title">
+      Land cover types - 2016
+    </h4>
+    <br />
+    <div class="esri-widget">
+      <calcite-label><b>Select land type:</b>
+        <calcite-radio-button-group name="Select land type" layout="vertical" id="landCoverTypeSelect" scale="s">
+          <calcite-label layout="inline"><calcite-radio-button id="forests" value="forests"
+              checked></calcite-radio-button>Forested Areas</calcite-label>
+          <calcite-label layout="inline"><calcite-radio-button value="developed"></calcite-radio-button>Developed
+            Areas</calcite-label>
+          <calcite-label layout="inline"><calcite-radio-button value="crops"></calcite-radio-button>Cultivated
+            Areas</calcite-label>
+          <calcite-label layout="inline"><calcite-radio-button value="hay"></calcite-radio-button>Hay/Pasture
+            Areas</calcite-label>
+          <calcite-label layout="inline"><calcite-radio-button
+              value="wetlands"></calcite-radio-button>Wetlands</calcite-label>
+        </calcite-radio-button-group>
+      </calcite-label>
+    </div>
+    <div id="projectionDiv" class="esri-widget">
+      <p><b>Change view's projection:</b></p>
+      <select id="projectWKID" class="esri-input esri-select">
+        <option value="102003" selected>Albers Equal Area</option>
+        <option value="102100">Web Mercator</option>
+        <option value="4326">WGS 84</option>
+      </select>
+    </div>
+  </div>
+</body>
+
+</html>
