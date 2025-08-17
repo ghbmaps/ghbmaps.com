@@ -103,3 +103,139 @@ body::before {
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
+
+/* ===== Blog Article (Graticules & Grids) =====
+   Add this block at the bottom of assets/css/styles.css
+   Everything is scoped to .blog-article to avoid bleed.
+================================================== */
+
+.blog-article {
+  color: #111;
+}
+
+.blog-article .lead {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+.blog-article h1,
+.blog-article h2,
+.blog-article h3,
+.blog-article h4,
+.blog-article h5,
+.blog-article h6 {
+  color: #0b1220;
+  scroll-margin-top: 6rem; /* fixed navbar offset for in-page anchors */
+}
+
+.blog-article p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.blog-article a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-article a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Hero / header image */
+.blog-article .article-hero img,
+.blog-article .article-img,
+.blog-article figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Figures & captions */
+.blog-article figure {
+  margin: 1.25rem 0 1.75rem;
+}
+
+.blog-article figcaption {
+  color: #6c757d;
+  font-size: 0.925rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Inline code & code blocks (light theme friendly) */
+.blog-article :not(pre) > code {
+  background: #f6f8fa;
+  border: 1px solid #e9ecef;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.925em;
+}
+
+.blog-article pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Lists spacing */
+.blog-article ul,
+.blog-article ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.blog-article li + li {
+  margin-top: 0.35rem;
+}
+
+/* Callouts / notes (use .callout + a variant) */
+.blog-article .callout {
+  border-left: 0.3rem solid var(--bs-primary);
+  background: #f8f9fa;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.375rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.blog-article .callout.callout-info {
+  border-left-color: var(--bs-info);
+  background: rgba(13, 202, 240, 0.06);
+}
+
+.blog-article .callout.callout-warning {
+  border-left-color: var(--bs-warning);
+  background: rgba(255, 193, 7, 0.08);
+}
+
+.blog-article .callout.callout-success {
+  border-left-color: var(--bs-success);
+  background: rgba(25, 135, 84, 0.08);
+}
+
+/* Small “tag” badges row (use .tag-list with .badge) */
+.blog-article .tag-list .badge {
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Simple table polish (inherits Bootstrap table styles) */
+.blog-article table {
+  margin: 1rem 0 1.5rem;
+}
+
+.blog-article table th {
+  background: #f8f9fa;
+}
+
+/* Optional: sticky TOC (if you add a sidebar TOC) */
+@media (min-width: 992px) {
+  .blog-article .toc-sticky {
+    position: sticky;
+    top: 6.5rem; /* below fixed navbar */
+  }
+}
