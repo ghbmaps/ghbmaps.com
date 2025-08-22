@@ -239,3 +239,14 @@ body::before {
     top: 6.5rem; /* below fixed navbar */
   }
 }
+
+/* Add a smooth zoom effect on hover for blog images */
+.blog-img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.blog-img:hover {
+  transform: scale(1.05); /* Slight zoom */
+  filter: brightness(1.1); /* Brighten a bit */
+  cursor: pointer;
+}
