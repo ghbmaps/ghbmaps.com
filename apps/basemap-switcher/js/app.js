@@ -4,7 +4,7 @@ require(["esri/config", "esri/Map", "esri/views/MapView"], (
   MapView
 ) => {
   esriConfig.apiKey =
-    "AAPTxy8BH1VEsoebNVZXo8HurPiRfSlGkoATgphm6SBlIEiDs9GHvcFQ0AC-K61IKcEUL6-0Yc1c7go1xswnSlrePZ7aTJmgj31LWhSp_PEVWImxGqboMIFtngYi4EaXvji1ny5o0MRA3ScPZAvf1DqyvbeJELi8Z3b0Pf7lML0lhcOSUO2BdffCZtZz8R1SmAOQbmLrW90Js7rj9xTivfM-EXAeKCf4tnFJrsJBKJRrh9s.AT1_kkSNM6FY";
+    "AAPTxy8BH1VEsoebNVZXo8HurPiRfSlGkoATgphm6SBlIEittqM14pBuhjEUR2wvb-bhy52jE5du7dlEmlnIsKcyr56_PCbE_UG6N_E17hMm6FUSD3dqTOuRxIPwwBrPmZpZgaogz3_ijGqtyZoTOH6zDkkCptU6j55ybxnhhTBndfjO4WYrTflDMO27O3gWf-LGy60dZ74f1Y6qoY4OU1ZnUwS7JF38ZM1KkSne5Fzoy1M.AT1_siGxYPuP";
 
   const map = new Map({
     basemap: "arcgis/imagery",
