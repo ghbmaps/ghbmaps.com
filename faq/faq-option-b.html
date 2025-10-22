@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ – SharePoint MP4 Demo (Option B)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0d6efd;
+        }
+
+        body {
+            padding-top: 72px;
+            background: #fff;
+            color: #212529;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+        }
+
+        .hero {
+            background: var(--brand-blue);
+            color: #fff;
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 3.5vw + 1rem, 4rem);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .faq-section {
+            padding: 48px 0 72px;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+        }
+
+        .video-thumb {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: .75rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, .1);
+            transition: transform .15s, box-shadow .15s;
+        }
+
+        .video-thumb img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .video-thumb .play-badge {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(0, 0, 0, .35));
+        }
+
+        .video-thumb .play-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .9);
+            display: grid;
+            place-items: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+        }
+
+        .video-thumb .play-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: #000;
+            margin-left: 2px;
+        }
+
+        .video-thumb:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Your Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#faqs">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+    </section>
+
+    <section id="faqs" class="faq-section">
+        <div class="container">
+            <div class="accordion" id="faqAccordion">
+
+                <!-- Example SharePoint paths (replace with your tenant/site/library) -->
+                <!-- Format usually works like:
+             https://<tenant>.sharepoint.com/sites/<SiteName>/Shared%20Documents/Video/how-to-01.mp4
+             You must grant org access (or specific groups) to each file. -->
+
+                <!-- 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1"
+                            aria-expanded="true">
+                            1) How do I perform Task A?
+                        </button>
+                    </h2>
+                    <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere nibh at euismod
+                                dapibus…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-01.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-01.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-01.jpg"
+                                    alt="Task A">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c2">
+                            2) Where can I find setting B?
+                        </button>
+                    </h2>
+                    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget pretium nunc…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-02.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-02.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-02.jpg"
+                                    alt="Setting B">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3..10: duplicate & update paths how-to-03.mp4 ... how-to-10.mp4 -->
+                <!-- For brevity, here are 8 more items with the same structure -->
+                <!-- 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c3">3) Reset my password?</button>
+                    </h2>
+                    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-03.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-03.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-03.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c4">4) Export a report?</button>
+                    </h2>
+                    <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-04.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-04.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-04.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c5">5) Update my profile?</button>
+                    </h2>
+                    <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-05.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-05.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-05.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c6">6) Configure notifications?</button>
+                    </h2>
+                    <div id="c6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-06.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-06.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-06.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c7">7) Create a new record?</button>
+                    </h2>
+                    <div id="c7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-07.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-07.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-07.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c8">8) Bulk import data?</button>
+                    </h2>
+                    <div id="c8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-08.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-08.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-08.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c9">9) Share a dashboard?</button>
+                    </h2>
+                    <div id="c9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-09.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-09.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-09.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="h10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c10">10) Troubleshoot errors?</button>
+                    </h2>
+                    <div id="c10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet…</p>
+                            <a class="video-thumb" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/how-to-10.mp4"
+                                data-poster="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-10.jpg">
+                                <img src="https://yourtenant.sharepoint.com/sites/Engineering/Shared%20Documents/Video/poster-10.jpg"
+                                    alt="">
+                                <span class="play-badge"><span class="play-icon"><svg viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white">Video</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <video id="videoPlayer" controls playsinline preload="metadata" poster="">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            const modalEl = document.getElementById('videoModal');
+            const player = document.getElementById('videoPlayer');
+
+            modalEl.addEventListener('show.bs.modal', function (e) {
+                const trigger = e.relatedTarget;
+                const url = trigger?.getAttribute('data-video') || '';
+                const poster = trigger?.getAttribute('data-poster') || '';
+                if (poster) player.setAttribute('poster', poster); else player.removeAttribute('poster');
+                player.src = url;      // SharePoint direct .mp4 URL (auth required)
+                player.muted = true;
+                const p = player.play(); if (p) p.catch(() => { });
+            });
+
+            modalEl.addEventListener('hidden.bs.modal', function () {
+                player.pause();
+                player.removeAttribute('src');
+                player.load();
+                player.removeAttribute('poster');
+                player.muted = false;
+            });
+        })();
+    </script>
+
+    <!-- Helpful tips:
+       • Ensure each .mp4 is shared to "People in your organization" or a specific group.
+       • Use the direct path to the file in the document library (ends with .mp4).
+       • If your HTML is NOT hosted in SharePoint, CORS for <video> usually works when you're logged in,
+         but if your tenant enforces stricter policies, host this HTML in SharePoint Pages or a doc library.
+  -->
+</body>
+
+</html>
